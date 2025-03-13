@@ -1,5 +1,5 @@
 {
-  "homepage": "https://Ajinkyashinde1906.github.io/Expense-Tracker",
+  "homepage": "https://letstryitfirst.github.io/Expense-Tracker",
   "name": "expense-track",
   "version": "0.1.0",
   "private": true,
@@ -44,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
