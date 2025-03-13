@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+nav {
+  height: 50px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 25px;
+}
+
+.logo {
+  background-color: #d0bfff;
+  width: 100px;
+  text-align: center;
+  margin-top: 15px;
+  border-radius: 12px;
+  font-size: 35px;
+  position: absolute;
+  left: 12px;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+    7px 7px 20px 0px rgba(0, 0, 0, .1),
+    4px 4px 5px 0px rgba(0, 0, 0, .1);
+}
+
+.logo a {
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: none;
+  color: #111;
+}
+
+
+.main h1 {
+  text-align: center;
+}
+
+.card {
+  margin: auto;
+  width: 140px;
+  height: 100px;
+  border-radius: 12px;
+  background-color: #b4e4ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+    7px 7px 20px 0px rgba(0, 0, 0, .1),
+    4px 4px 5px 0px rgba(0, 0, 0, .1);
+}
+
+.card button {
+  margin-top: 3px;
+  height: 20px;
+  width: 60px;
+  border: 0;
+  border-radius: 12px;
+  background-color: #fdcedf;
+  cursor: pointer;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+    4px 4px 10px 0px rgba(0, 0, 0, .1),
+    2px 2px 3px 0px rgba(0, 0, 0, .1);
+}
+
+.dailyTransaction {
+  display: flex;
+  text-align: center;
+  width: 95%;
+  /* background-color: yellow; */
+  margin: 20px auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 80px;
+}
+
+.dailyTransaction .row {
+  display: flex;
+  width: 95%;
+  max-width: 750px;
+}
+
+.dailyTransaction .head {
+  font-weight: bold;
+}
+
+
+.dailyTransaction .row div {
+  border: 1px solid #111;
+  padding: 4px;
+}
+
+.dailyTransaction .srno {
+  /* background-color: red; */
+  min-width: 10%;
+}
+
+.dailyTransaction .date {
+  /* background-color: blue; */
+  min-width: 25%;
+}
+
+.dailyTransaction .name {
+  /* background-color: #fdcedf; */
+  min-width: 50%;
+}
+
+.dailyTransaction .amount {
+  /* background-color: aqua; */
+  min-width: 25%;
+}
+
+.dailyTransaction .deletehead {
+  border: 0 !important;
+  width: 30px;
+}
+
+.dailyTransaction .delete {
+  width: 30px;
+  padding-left: 5px;
+  margin: auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dailyTransaction .delete:hover {
+  color: #fc2947;
+}
+
+.addTransaction {
+  position: fixed;
+  bottom: 10%;
+  /* background-color: red; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addTransaction .inputBox {
+  position: relative;
+}
+
+.addTransaction .inputBox input {
+  margin: auto;
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background-color: #1d2b3a;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  font-size: 1em;
+  transition: 0.5s;
+}
+
+.addTransaction .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 15px;
+  pointer-events: none;
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.25);
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.addTransaction .inputBox input:valid~span,
+.addTransaction .inputBox input:focus~span {
+  color: #00dfc4;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65em;
+  padding: 0 10px;
+  background-color: #1d2b3a;
+  border-left: 1px solid #00dfc4;
+  border-right: 1px solid #00dfc4;
+  letter-spacing: 0.2em;
+}
+
+.addTransaction .inputBox input:valid,
+.addTransaction .inputBox input:focus {
+  border: 1px solid #00dfc4;
+}
+
+.addTransaction .inputBox #amount {
+  width: 120px;
+}
+
+.addTransaction button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 0;
+  background-color: #1d2b3a;
+  color: #00dfc4;
+  font-size: 28px;
+}
+
+.addTransaction .inputBox input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+.edit {
+  position: fixed;
+  right: 30px;
+  top: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.clear {
+  position: fixed;
+  right: 80px;
+  top: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.confirmDelete {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background-color: #fafafa73;
+}
+
+.confirmDelete .box {
+  height: 100px;
+  width: 300px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #beadfa;
+}
+
+.confirmDelete .box button {
+  height: 30px;
+  width: 60px;
+  margin: 5px;
+  background-color: #f8f8f8;
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+@media (max-width: 300px) {
+  .main {
+    font-size: 7px;
+  }
+
+  .main h1 {
+    padding-top: 20px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 330px) {
+  .dailyTransaction .date {
+    font-size: 9px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 400px) {
+  .main {
+    font-size: 10px;
+  }
+
+
+}
+
+
+@media (min-width: 300px) and (max-width: 600px) {
+  .main {
+    font-size: 12px;
+  }
+
+  .main h1 {
+    padding-top: 20px;
+  }
+
+  .addTransaction {
+    bottom: 3%;
+    width: 98%;
+  }
+
+  .addTransaction .inputBox input {
+    margin: 3px;
+    padding: 5px;
+  }
+
+  .addTransaction .inputBox span {
+    padding: 9px;
+  }
+
+  .dailyTransaction {
+    width: 90%;
+    margin: 0;
+  }
+
+  .dailyTransaction .row div {
+    padding: 4px 0;
+  }
+
+  .addTransaction .inputBox input[type="text"] {
+    width: 40vw;
+  }
+
+  .addTransaction .inputBox #amount {
+    width: 80px;
+  }
+
+  .addTransaction .inputBox input[type="date"] {
+    width: 20vw;
+
+  }
+}
